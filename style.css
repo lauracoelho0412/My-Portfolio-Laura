@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    background: linear-gradient(to bottom, #1d1d1d,#1165ff);
+}
+html{
+    color: #f1f1f1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
