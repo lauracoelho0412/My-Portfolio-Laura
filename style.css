@@ -1,11 +1,58 @@
+/* para class usa . para id usa #
+margin - margem externa
+padding - margem interna
+dislay -
+nunca escolher a cor branco */
+header{
+    margin: 160px 0 0 0; /*Espaçamento começo do site*/
+}
 body{
     margin: 0;
     padding: 0;
-}
-#main{
-    background: linear-gradient(to bottom, #1d1d1d,#1165ff);
+    min-height: 1000px;
+    background: linear-gradient(to bottom right, #0e2f6b, #05132c) no-repeat;
 }
 html{
     color: #f1f1f1;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+ul{
+    padding: 0;
+    margin: 0 5px 5px 5px;
+    list-style-type: none;
+    overflow: hidden;
+    width: 99%;
+    background-color:#05132c;
+    position:fixed; 
+    top: 0;
+    border-radius: 10px;
+}
+/* Centered section inside the top navigation */
+li{
+    float: left; /*navbar horizontal*/
+    
+}
+li a{
+    
+    display: block;
+    text-decoration: none;
+    color:#f1f1f1;
+    padding: 22px 25px;
+    
+}
+li a:hover{ /* Change the link color on hover */
+    background-color: #0e2f6b;
+    color: #f1f1f1;
+}
+.active{ /*class to the current link to let the user know which page he/she is on*/
+    background-color: #0e2f6b;
+    color: #f1f1f1;
+}
+.topnav-center{
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
