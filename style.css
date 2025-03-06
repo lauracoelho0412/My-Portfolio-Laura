@@ -25,6 +25,7 @@ ul{
     position: fixed; 
     top: 0;
     border-radius: 30px;
+    height: 50px;
 }
 /* Centered section inside the top navigation */
 li{
@@ -37,7 +38,7 @@ li a{
     display: block;
     text-decoration: none;
     color:#f1f1f1;
-    padding: 22px 25px;
+    padding: 14px 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
