@@ -17,18 +17,19 @@ html{
 }
 ul{
     padding: 0;
-    margin: 0 5px 5px 5px;
+    margin: 50px 0px 0px 360px;
     list-style-type: none;
     overflow: hidden;
-    width: 99%;
+    width: 41%; 
     background-color:#090a0f;
-    position:fixed; 
+    position: fixed; 
     top: 0;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 /* Centered section inside the top navigation */
 li{
-    float: left; /*navbar horizontal*/
+    float: left;
+    /*navbar horizontal*/
     
 }
 li a{
@@ -40,21 +41,15 @@ li a{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
-/*.pages:hover{ /* Change the link color on hover
+li a:hover{ /* Change the link color on hover*/
     background-color: #202e49;
     color: #f1f1f1;
-}*/
+}
 .active{ /*class to the current link to let the user know which page he/she is on*/
     background-color: #202e49;
     color: #f1f1f1;
 }
-.topnav-center{  /*Navbar itens no centro*/
-    float: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 #title{
     position: absolute;
     top: 50%;
@@ -451,6 +446,6 @@ li a{
     }
 }
 .logo{
-    max-width: 3%;
+    max-width: 9%;
     height: auto;
 }
