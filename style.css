@@ -17,21 +17,21 @@ html{
 }
 ul{
     padding: 0;
-    margin: 50px 0px 0px 360px;
+    margin: 50px 0px 0px 0px;
     list-style-type: none;
     overflow: hidden;
-    width: 41%; 
     background-color:#090a0f;
     position: fixed; 
     top: 0;
     border-radius: 30px;
     height: 50px;
 }
-/* Centered section inside the top navigation */
+.container{
+    justify-content: center;
+}
 li{
     float: left;
-    /*navbar horizontal*/
-    
+    /*navbar horizontal*/ 
 }
 li a{
     
@@ -49,6 +49,9 @@ li a:hover{ /* Change the link color on hover*/
 .active{ /*class to the current link to let the user know which page he/she is on*/
     background-color: #202e49;
     color: #f1f1f1;
+}
+.logo{
+    width: 10%;
 }
 
 #title{
