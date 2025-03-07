@@ -9,20 +9,21 @@ body {
     padding: 0;
 }
 html {
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #040507 100%);
-    height: 500%;
+    background: radial-gradient(ellipse at bottom, #46668a 0%, #040507 100%);
+    height: 250%;
+    color: #f1f1f1;
 }
 ul {
     padding: 0;
     margin: 60px 0px 0px 0px;
-    width: 33%;
     list-style-type: none;
     overflow: hidden;
-    background-color: #090b0f;
+    background-color: #3a4868;
     position: relative;
     top: 0;
     border-radius: 30px;
     height: 45px;
+    box-shadow: 0px 0px 30px black;
 }
 
 li {
@@ -53,11 +54,16 @@ li a:hover {
     color: #f1f1f1;
     text-shadow: 0px 0px 10px #f1f1f1;
 }
+.flex-container {
+    display: flex;
+    justify-content: center;
+  }
 
 /*.logo{
     width: 10%;
     padding: 0px 10px 10px;
 }*/
+
 #title {
     position: absolute;
     top: 50%;
@@ -85,14 +91,16 @@ li a:hover {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.flex-container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 110px;
+  }
+
 #title2 {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-align: left;
     font-weight: 300;
     font-size: 60px;
-    padding-left: 100px;
     color: #f1f1f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -101,22 +109,39 @@ li a:hover {
     text-align: left;
     font-weight: 300;
     font-size: 50px;
-    padding-left: 110px;
-    padding-right: 100px;
     color: #f1f1f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
+.flex-container3 {
+    display: flex;
+    flex-direction: row;
+    padding-right:30px;
+}
+.flex-container4 {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-container5 {
+    display: flex;
+    flex-direction: row;
+  }
 #title4 {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-align: left;
     font-weight: 300;
     font-size: 35px;
-    padding-left: 110px;
     color: #f1f1f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
+#text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+.end{
+    background-color: #46668a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
 /*pontos das estrelas e suas posições*/
 #star {
     width: 1px;
