@@ -212,11 +212,11 @@ a {
 /*SKILLS*/
 .bar{
     background-color: #f0f0f0;
-    border-radius: 8px;
+    border-radius: 30px;
 }
 .exp{
     background-color: #3a4868;
-    border-radius: 8px;
+    border-radius: 30px;
 }
 .skills h3{
     font-size: 20px;
