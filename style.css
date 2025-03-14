@@ -12,10 +12,10 @@ nunca escolher a cor branco */
 body {
     margin: 0;
     padding: 0;
+    background: radial-gradient(ellipse at bottom, #46668a 0%, #040507 100%);
 }
 
 html {
-    background: radial-gradient(ellipse at bottom, #46668a 0%, #040507 100%);
     height: 700%;
     color: #f1f1f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
