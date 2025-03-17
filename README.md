@@ -8,4 +8,4 @@ Purpose:
 
 The purpose of this repository is to create a professional, visually appealing, and functional portfolio to demonstrate my abilities.
 
-It is built with HTML, CSS and JavaScript to provide a user-friendly experience that reflects my attention to detail and commitment to high-quality work.
+It is built with HTML and CSS to provide a user-friendly experience that reflects my attention to detail and commitment to high-quality work.
