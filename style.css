@@ -1,19 +1,19 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(ellipse at bottom, #46668a 0%, #040507 100%);
+    background: rgb(7, 12, 17)
 }
 
 html {
     color: #f1f1f1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: "Rubik", sans-serif;
 }
 
 section {
@@ -34,58 +34,53 @@ h1 {
 
 h2 {
     font-size: 2.2rem;
-    position: relative;
     display: inline-block;
     margin-bottom: 2rem;
 }
+.wrapper{
+    padding: 0px;
+}
 
 /*NAVBAR*/
-ul {
-    padding: 0;
-    margin: 60px 0px 0px 0px;
-    /*point where navbar start*/
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #3a4868;
-    position: relative;
-    top: 0;
-    border-radius: 30px;
-    height: 45px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-li {
-    float: left;
-    /*navbar horizontal*/
-}
-
-li a {
-
-    display: block;
-    text-decoration: none;
-    color: #f1f1f1;
-    padding: 14px 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-li a:hover {
-    /* Change the link color on hover*/
-    background-color: transparent;
-    color: #f1f1f1;
-    text-shadow: 0px 0px 10px #f1f1f1;
-}
-
-.active {
-    /*class to the current link to let the user know which page he/she is on*/
-    background-color: transparent;
-    color: #f1f1f1;
-    text-shadow: 0px 0px 10px #f1f1f1;
-}
-
-.flex-container {
+.sidenav{
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 20px 0px 0px 0px;
+    background-color: rgba(3, 6, 8, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+.sidenav a{
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 0px 10px 5px;
+}
+.sidenav a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+}
+.sidenav a:hover::after {
+    width: 100%;
+}
+.icon {
+    margin-left: 30px;
+    margin-top: 20px;
+    visibility: hidden;
+    position: relative;
 }
 
 /*PRINCIPAL*/
@@ -103,58 +98,46 @@ li a:hover {
 }
 
 #title span {
-    background: -webkit-linear-gradient(white, #38495a);
+    background: -webkit-linear-gradient(white, #adc1d6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
 #description {
-    color: #cdcbda;
+    color: #c0c0c0d0;
     letter-spacing: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
 }
 
 /*ME*/
 .apresentation {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80vh;
-    padding: 0 10%;
-}
-
-.me {
-    flex: 1;
-    max-width: 600px;
-}
-
-.me h1 {
-    margin-bottom: 1rem;
-}
-
-.me h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.laura-image img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border: 8px solid #38495a;
-}
-
-.laura-image {
-    flex: 1;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 60vh;
+    padding: 0 10%;
+}
+.apresentation h2{
+    color: #c0c0c0d0;
+    font-size: 20px;
+    font-weight: 400;
 }
 
+.nav2 a{
+    display: inline-block;
+    margin: 20px;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+}
+.nav2 a:hover{
+   box-shadow:0px 0px 10px rgba(255, 255, 255, 0.3);
+}
 /*BUTON*/
 .secondary {
     background-color: transparent;
@@ -207,12 +190,11 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
 }
 
 .card {
-    width: 290px;
-    background-color: #3a4868;
+    display: flex;
+    background-color: #001f5e60;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -220,7 +202,7 @@ a {
 }
 
 .card img {
-    width: 100%;
+    width: 60%;
     height: auto;
 }
 
@@ -229,7 +211,7 @@ a {
 }
 
 .card-content h3 {
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
@@ -246,7 +228,7 @@ a {
 }
 
 .exp {
-    background-color: #3a4868;
+    background-color: #001f5ec9;
     border-radius: 30px;
 }
 
@@ -653,31 +635,69 @@ a {
         transform: translateY(-2000px);
     }
 }
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
     }
-    
+
     h2 {
         font-size: 1.8rem;
     }
-    
+
     .apresentation {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
         padding-top: 2rem;
     }
-    
+
     .me {
         order: 2;
     }
-    
+
     .laura-image {
         order: 1;
     }
-    
+
     .btn {
         justify-content: center;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #1f2831;
+        overflow-x: hidden;
+        transition: 0.5s;
+        align-items: baseline;
+        justify-content: left;
+        z-index: 1;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        float: none;
+        text-align: left;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    .icon{
+        visibility: visible;
+    }
+    .nav2 a{
+        margin: 0;
+        padding: 22px 14px;
+        font-size: 14px;
     }
 }

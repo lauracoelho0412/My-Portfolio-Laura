@@ -8,25 +8,25 @@
     <title>Portfolio - Laura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <header>
-        <div class="flex-container">
+        <div class="sidenav" id="mySidenav">
             <nav>
-                <ul>
-                    <li><a href="index.html"> <STRong>HOME</STRong></a></li>
-                    <li><a href="aboutme.html"> <strong>ABOUT ME</strong></a></li>
-                    <li class="active"><a href="portfolio.html"><strong>PORTFOLIO</strong></a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="aboutme.html">About me</a>
+                <a href="portfolio.html">My portfolio</a>
             </nav>
         </div>
+        <span onclick="openNav()"><i class="fa fa-bars fa-2x icon"></i></span>
     </header>
     <br><br>
     <section id="portfolio" class="portfolio">
-                <h1> <strong>Sorry, there's nothing here yet</strong></h1>
-                <h2>As soon as I'm doing, I will put in here!</h2>
+        <h1> <strong>Sorry, there's nothing here yet</strong></h1>
+        <h2>As soon as I'm doing, I will put in here!</h2>
     </section>
     <br><br>
     <!--END OF THE PAGE-->
@@ -38,6 +38,7 @@
         <br><br>
         <p>© 2025 Laura Coelho. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

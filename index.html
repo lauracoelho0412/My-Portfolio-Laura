@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Home - Laura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <style>
-    html{
-        overflow: hidden; 
+    html {
+        overflow: hidden;
         height: 100%;
     }
 </style>
+
 <body>
     <!--STARS-->
     <section class="wrapper">
@@ -21,30 +25,27 @@
         <div id="star3"></div>
         <!--NAVBAR-->
         <header>
-            <div class="flex-container">
+            <div class="sidenav" id="mySidenav">
                 <nav>
-                    <ul>
-                        <li class="active"><a href="index.html"> <STRong>HOME</STRong></a></li>
-                        <li><a href="aboutme.html"> <strong>ABOUT ME</strong></a></li>
-                        <li><a href="portfolio.html"><strong>PORTFOLIO</strong></a></li>
-                    </ul>
+                    <a href="index.html">Home</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="portfolio.html">My portfolio</a>
                 </nav>
             </div>
+            <span onclick="openNav()"><i class="fa fa-bars fa-2x icon"></i></span>
         </header>
         <br> <br>
         <!--PRINCIPAL-->
         <div id="title">
             <span><strong>Welcome to Laura's portfolio!</strong></span>
             <div id="description">
-                <p style="text-align: center; font-size: 20px;"> Here you will find informations about me, <br>some
-                    of my
-                    projects
-                    and my
-                    likes!
+                <p style="text-align: center; font-size: 20px;"> Here you will find informations about me,
+                     <br>some of my projects and my likes!
                 </p>
             </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>

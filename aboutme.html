@@ -7,41 +7,35 @@
     <link rel="stylesheet" href="style.css">
     <title>About me - Laura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <!--NAVBAR-->
-        <div class="flex-container">
+        <div class="sidenav" id="mySidenav">
             <nav>
-                <ul>
-                    <li><a href="index.html"> <STRong>HOME</STRong></a></li>
-                    <li class="active"><a href="aboutme.html"> <strong>ABOUT ME</strong></a></li>
-                    <li><a href="portfolio.html"><strong>PORTFOLIO</strong></a></li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="aboutme.html">About me</a>
+                <a href="portfolio.html">My portfolio</a>
             </nav>
         </div>
+        <span onclick="openNav()"><i class="fa fa-bars fa-2x icon"></i></span>
     </header>
     <section id="apresentation" class="apresentation">
         <!--ME-->
-        <div class="me">
-            <h1>Hi, I'm <span class="highlight">Laura Coelho</span></h1>
-            <h2>Student | Developer<h2>
-                <br>
-                    <div class="btn">
-                        <a href="#contact" class="btn secondary">
-                            Contact Me
-                        </a>
-                    </div>
-        </div>
-        <div class="laura-image">
-            <img src="img/laura.jpg" alt="Laura Coelho Profile Photo" id="profile-img">
-        </div>
-        </div>
+        <h1>Hi, I'm Laura Coelho</h1>
+        <h2>Student | Developer<h2>
+                <div class="nav2">
+                    <a href="#aboutme">About me</a>
+                    <a href="#Musics">Musics</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                    <hr>
+                </div>
     </section>
     <!--INFORMATIONS-->
     <section id="aboutme" class="aboutme">
-        <hr>
         <br>
         <br>
         <h2>About me</h2>
@@ -51,36 +45,9 @@
             Now, at 18 years old, I am eager to apply my skills, share my ideas, and gain valuable experience through
             hands-on projects in the field.</p>
     </section>
-    <section id="hobbies" class="hobbies">
-        <h2>My Hobbies</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="img/volei.jpeg" alt="">
-                <div class="card-content">
-                    <h3> Play Voleyball</h3>
-                    <p> I have always had a passion for sports, particularly volleyball. I've had the opportunity to
-                        compete in several championships and have even earned MVP titles!
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/viagem.jpeg" alt="">
-                <div class="card-content">
-                    <h3> Travel</h3>
-                    <p>Getting to know the world has been one of the most beautiful experiences of my life! I love
-                        discovering different cultures, meeting new people, and exploring new places!</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/piano.jpeg" alt="">
-                <div class="card-content">
-                    <h3> Play Piano</h3>
-                    <p>Music has always been a peaceful refuge for me. It allows me to express my emotions and
-                        feelings, and the piano, in particular, produces one of the most beautiful sounds in the
-                        world!</p>
-                </div>
-            </div>
-        </div>
+    <section id="music" class="music">
+        <h2>My Favorite Musics</h2>
+        
     </section>
     <section id="skills" class="skills">
         <div class="skills">
@@ -131,5 +98,7 @@
         <br>
         <p>© 2025 Laura Coelho. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
