@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Laura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -16,29 +16,34 @@
     <header>
         <div class="sidenav" id="mySidenav">
             <nav>
+                <div class="language-selector">
+                    <button id="english-mode" class="selector-btn active2">EN</button>
+                    <button id="pt-mode" class="selector-btn">PT</button>
+                </div>
                 <a href="index.html">Home</a>
                 <a href="aboutme.html">About me</a>
-                <a href="portfolio.html">My portfolio</a>
+                <a href="portfolio.html" class="active">My portfolio</a>
             </nav>
         </div>
         <span onclick="openNav()"><i class="fa fa-bars fa-2x icon"></i></span>
     </header>
     <br><br>
-    <section id="portfolio" class="portfolio">
-        <h1> <strong>Sorry, there's nothing here yet</strong></h1>
-        <h2>As soon as I'm doing, I will put in here!</h2>
+    <section id="repositories" class="repositories">
+        <h2> <strong>Repositories</strong></h2>
+        <!--API GitHub JavaScript-->
     </section>
     <br><br>
     <!--END OF THE PAGE-->
     <footer class="end">
         <h4>Follow me on social media!</h4>
-        <a href="https://www.instagram.com/lauraolivc/?next=%2F"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/laura-coelho-19474030b/"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/lauracoelho0412"><i class="fa fa-github"></i></a>
+        <a href="https://www.instagram.com/lauraolivc/?next=%2F"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/laura-coelho-19474030b/"><i class="fa fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/lauracoelho0412"><i class="fa fa-github fa-2x"></i></a>
         <br><br>
         <p>© 2025 Laura Coelho. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/tradution.js"></script>
 </body>
 
 </html>
