@@ -294,6 +294,7 @@ a {
     margin: 20px 180px 0px 180px;
     border: 1px solid var(--text-light);
     border-radius: 6px;
+    gap: 15px;
 }
 .contributions-image{
     display: flex;
