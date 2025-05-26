@@ -8,49 +8,38 @@
     <title>Home - Laura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 </head>
-<style>
-    html {
-        overflow: hidden;
-        height: 100%;
-    }
-</style>
-
 <body>
-    <!--STARS-->
-    <section class="wrapper">
-        <div id="star"></div>
-        <div id="star2"></div>
-        <div id="star3"></div>
-        <!--NAVBAR-->
-        <header>
-            <div class="sidenav" id="mySidenav">
-                <nav>
-                     <div class="language-selector">
+    <!--NAVBAR-->
+    <header>
+        <div class="sidenav" id="mySidenav">
+            <nav>
+                <div class="language-selector">
                     <button id="english-mode" class="selector-btn active2">EN</button>
                     <button id="pt-mode" class="selector-btn">PT</button>
                 </div>
-                    <a href="index.html" class="active">Home</a>
-                    <a href="aboutme.html">About me</a>
-                    <a href="portfolio.html">My portfolio</a>
-                </nav>
-            </div>
-            <span onclick="openNav()"><i class="fa fa-bars fa-2x icon"></i></span>
-        </header>
-        <br> <br>
-        <!--PRINCIPAL-->
-        <div id="title">
-            <span><strong>Welcome to Laura's portfolio!</strong></span>
-            <div id="description">
-                <p style="text-align: center; font-size: 20px;"> Here you will find informations about me,
-                     <br>some of my projects and my likes!
-                </p>
-            </div>
+                <a href="index.html" class="active">Home</a>
+                <a href="aboutme.html">About me</a>
+                <a href="portfolio.html">My portfolio</a>
+            </nav>
         </div>
-    </section>
+        <span onclick="openNav()"><i class="fa fa-bars fa-2x icon"></i></span>
+    </header>
+    <br> <br>
+    <!--PRINCIPAL-->
+    <div id="title">
+        <span><strong>Welcome to Laura's portfolio!</strong></span>
+        <div id="description">
+            <p style="text-align: center; font-size: 20px;"> Here you will find informations about me,
+                <br>some of my projects and my likes!
+            </p>
+        </div>
+    </div>
     <script src="js/script.js"></script>
     <script src="js/tradution.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
 </body>
 
 </html>

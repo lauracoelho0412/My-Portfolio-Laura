@@ -32,7 +32,7 @@ function getApiGitHub() {
                 <div class="project">
                     <div class="content">
                         <div class="description">
-                            <h4 class="title">${ item.name}</h4>
+                            <h4 class="title">${item.name}</h4>
                             <p class="program">${item.description}</p>
                          </div>
                         <div class="data">
@@ -52,3 +52,44 @@ function getApiGitHub() {
 }
 
 getApiGitHub()
+
+// Star effect using p5.js
+let star = [];
+let quantity = 150;
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    stroke(255);
+
+    for (let i = 0; i < quantity; i++) {
+        star[i] = [];
+        star[i][0] = random(width);
+        star[i][1] = random(height);
+        star[i][2] = random(1, 4);
+
+    }
+}
+
+function draw() {
+    background(7, 12, 17);
+    for (let i = 0; i < quantity; i++) {
+
+        let thickness = map(star[i][2], 1, 5, 0.5, 3.5);
+        strokeWeight(thickness);
+
+        let size = map(star[i][2], 1, 5, 2, 5);
+        line(star[i][0], star[i][1], star[i][0], star[i][1] + size);
+
+        let velocity = map(star[i][2], 5, 1, 0.2, 0.8);
+        star[i][1] -= velocity;
+
+        if (star[i][1] < 0) {
+            star[i][0] = random(width);
+            star[i][1] = height;
+        }
+    }
+    //Fix the canvas size on window resize
+    if (windowWidth !== width || windowHeight !== height) {
+        resizeCanvas(windowWidth, windowHeight);
+    }
+    // Fix the beginning of the canvas on window
+}
