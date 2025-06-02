@@ -507,9 +507,10 @@ canvas {
     .language-selector {
         margin-bottom: 15px;
     }
-    .project{
-        height: auto;
-        width: 340px;
+
+    .project {
+        margin: 20px 0;
+        padding: 15px;
     }
 
     .contributions-content{
