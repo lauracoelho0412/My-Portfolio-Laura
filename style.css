@@ -512,6 +512,9 @@ canvas {
         margin: 20px 0;
         padding: 15px;
     }
+    .content a{
+        font-size: 0.9rem;
+    }
 
     .contributions-content{
         margin: 0;
