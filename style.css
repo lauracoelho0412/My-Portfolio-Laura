@@ -205,7 +205,6 @@ nav {
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin-right: 1rem;
 }
 
 .btn h4 {
@@ -271,14 +270,38 @@ a {
 }
 
 /*SKILLS*/
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.column1, .column2{
+    width: 50%;
+}
 .bar {
-    background-color: var(--text-color);
+    background-color: #ffffff9c;
     border-radius: 30px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .exp {
     background-color: var(--border-color);
     border-radius: 30px;
+    height: 10px;
+    width: 0%;
+}
+.english.visible, .teamwork.visible{
+     animation: good 2s ease-in-out forwards;
+}
+.html.visible, .office.visible{
+     animation: medium 2s ease-in-out forwards;
+}
+.js.visible{
+     animation: js 2s ease-in-out forwards;
+     animation-range-start: 0.5s;
 }
 
 .skills h3 {
@@ -389,6 +412,31 @@ canvas {
   display: block;
 }
 
+@keyframes good {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
+}   
+@keyframes medium{
+    from {
+        width: 0%;
+    }
+    to {
+        width: 70%;
+    }
+}
+@keyframes js {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 40%;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5rem;
@@ -403,14 +451,6 @@ canvas {
         text-align: center;
         gap: 2rem;
         padding-top: 2rem;
-    }
-
-    .me {
-        order: 2;
-    }
-
-    .laura-image {
-        order: 1;
     }
 
     .btn {
@@ -469,11 +509,17 @@ canvas {
     }
     .project{
         height: auto;
-        width: 300px;
+        width: 340px;
     }
 
     .contributions-content{
         margin: 0;
         justify-content: start;
 }
+    .row {
+        flex-direction: column;
+    }
+    .column1, .column2 {
+        width: 100%;
+    }
 }

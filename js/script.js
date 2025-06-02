@@ -93,3 +93,13 @@ function draw() {
     }
     // Fix the beginning of the canvas on window
 }
+
+ const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.exp').forEach((el) => observer.observe(el));
