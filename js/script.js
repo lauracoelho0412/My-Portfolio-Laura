@@ -2,6 +2,81 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     console.log("Portfolio site loaded");
 
+    // Dark and Light Mode 
+ const lightBtn = document.getElementById("light-mode");
+  const darkBtn = document.getElementById("dark-mode");
+
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+  }
+  
+  function getCookie(name) {
+    return document.cookie.split('; ').reduce((acc, cookie) => {
+      const [key, val] = cookie.split('=');
+      return key === name ? val : acc;
+    }, '');
+  }
+
+  function applyLightMode(){
+    lightBtn.classList.add("active2")
+    darkBtn.classList.remove("active2")
+
+    document.body.classList.add("light-mode");
+    document.querySelector("header").classList.add("light-mode");
+    document.querySelectorAll("html").forEach(h => h.classList.add("light-mode"));
+    document.querySelectorAll(".sidenav a").forEach(s => s.classList.add("light-mode"));
+    document.querySelectorAll(".nav2 a").forEach(n => n.classList.add("light-mode"));
+    document.querySelectorAll("h2").forEach(h2 => h2.classList.add("light-mode"));
+    document.querySelectorAll(".sidenav").forEach(side => side.classList.add("light-mode"));
+    document.querySelectorAll(".contributions-content").forEach(c => c.classList.add("light-mode"));
+    document.querySelectorAll(".project").forEach(p => p.classList.add("light-mode"));
+    document.querySelectorAll(".program").forEach(program => program.classList.add("light-mode"));
+    document.querySelectorAll(".data2").forEach(data => data.classList.add("light-mode"));
+    document.querySelectorAll(".language-name").forEach(l => l.classList.add("light-mode"));
+    document.querySelectorAll(".language-level").forEach(level => level.classList.add("light-mode"));
+    document.querySelectorAll("i").forEach(end => end.classList.add("light-mode"));
+    document.querySelectorAll(".subtitle").forEach(subtitle => subtitle.classList.add("light-mode"));
+  }
+   function applyDarkMode(){
+    darkBtn.classList.add("active2")
+    lightBtn.classList.remove("active2")
+
+     document.body.classList.remove("light-mode");
+    document.body.classList.remove("light-mode");
+    document.querySelector("header").classList.remove("light-mode");
+    document.querySelectorAll("html").forEach(h => h.classList.remove("light-mode"));
+    document.querySelectorAll(".sidenav a").forEach(s => s.classList.remove("light-mode"));
+    document.querySelectorAll(".nav2 a").forEach(n => n.classList.remove("light-mode"));
+    document.querySelectorAll("h2").forEach(h2 => h2.classList.remove("light-mode"));
+    document.querySelectorAll(".sidenav").forEach(side => side.classList.remove("light-mode"));
+    document.querySelectorAll(".contributions-content").forEach(c => c.classList.remove("light-mode"));
+    document.querySelectorAll(".project").forEach(p => p.classList.remove("light-mode"));
+    document.querySelectorAll(".program").forEach(program => program.classList.remove("light-mode"));
+    document.querySelectorAll(".data2").forEach(data => data.classList.remove("light-mode"));
+    document.querySelectorAll(".language-name").forEach(l => l.classList.remove("light-mode"));
+    document.querySelectorAll(".language-level").forEach(level => level.classList.remove("light-mode"));
+    document.querySelectorAll("i").forEach(end => end.classList.remove("light-mode"));
+    document.querySelectorAll(".subtitle").forEach(subtitle => subtitle.classList.remove("light-mode"));
+  }
+  
+  lightBtn.addEventListener('click', function () {
+    applyLightMode();
+    setCookie('theme', 'light', 30);
+  });
+
+  darkBtn.addEventListener('click', function () {
+    applyDarkMode();
+    setCookie('theme', 'dark', 30);
+  });
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = getCookie('theme');
+    if (savedTheme === 'dark') {
+      applyDarkMode();
+    } else {
+      applyLightMode();
+    }
+  });
 
 })
 // sidenav for small screens
@@ -103,3 +178,5 @@ function draw() {
   });
 
   document.querySelectorAll('.exp').forEach((el) => observer.observe(el));
+
+  

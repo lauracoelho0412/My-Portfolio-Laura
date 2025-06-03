@@ -105,7 +105,7 @@ nav {
     margin: 5px;
 }
 
-.language-selector {
+.mode-selector {
     display: flex;
     float: right;
     margin-left: 70px;
@@ -412,6 +412,21 @@ canvas {
   display: block;
 }
 
+/*Dark and Light mode*/
+body.light-mode {
+    --background-color: var(--text-light);
+}
+html.light-mode, .sidenav a.light-mode, .nav2 a.light-mode, h2.light-mode,.program.light-mode, .data2.light-mode, .language-name.light-mode, .language-level.light-mode, i.light-mode, .subtitle.light-mode{   
+    color: var(--primary-color);
+}
+.sidenav.light-mode {
+    background-color: #f1f1f1;
+}
+.contributions-content.light-mode, .project.light-mode {
+    border: 1px solid var(--primary-color);
+}
+
+/*ANIMATIONS*/
 @keyframes good {
     from {
         width: 0%;
