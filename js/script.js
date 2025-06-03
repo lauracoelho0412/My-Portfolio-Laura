@@ -168,7 +168,7 @@ function draw() {
     }
     // Fix the beginning of the canvas on window
 }
-
+// Skills section animation
  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
