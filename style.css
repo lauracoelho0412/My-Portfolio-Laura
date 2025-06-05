@@ -7,6 +7,7 @@
     --border-color: #002b91;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -57,7 +58,7 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 15px 0px 0px 0px;
-    background-color: rgba(3, 6, 8, 0.8);
+    background-color: var(--secondary-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -112,7 +113,7 @@ nav {
     margin-left: 70px;
 }
 
-.selector-btn {
+#theme-switch {
     padding: 7px 10px 7px;
     border-radius: 5px;
     font-weight: 500;
@@ -123,7 +124,26 @@ nav {
     background-color: var(--background-color);
     color: var(--text-color);
 }
+#theme-switch i {
+    fill: var(--text-light);
+}
 
+#theme-switch i:first-child{
+    display: none;
+}
+
+#theme-switch.light-mode i:last-child {
+    display: none;
+}
+#theme-switch.light-mode i:first-child {
+    display: block;
+}
+
+#theme-switch:hover {
+    background-color: var(--border-color);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 .active2 {
     background-color: var(--border-color);
 }
@@ -303,9 +323,12 @@ a {
     animation: good 2s ease-in-out forwards;
 }
 
-.html.visible,
-.office.visible {
+.html.visible{
     animation: medium 2s ease-in-out forwards;
+}
+
+.office.visible{
+    animation: office 2s ease-in-out forwards;
 }
 
 .js.visible {
@@ -448,7 +471,8 @@ h2.light-mode,
 .language-level.light-mode,
 i.light-mode,
 .subtitle.light-mode,
-.secondary.light-mode {
+.secondary.light-mode,
+#description.light-mode{
     color: var(--primary-color);
 }
 
@@ -461,7 +485,10 @@ i.light-mode,
 .secondary.light-mode {
     border: 1px solid var(--primary-color);
 }
-
+#title span.light-mode{
+    background: -webkit-linear-gradient(rgb(0, 0, 0), #5d6874);
+    -webkit-background-clip: text;
+}
 /*ANIMATIONS*/
 @keyframes good {
     from {
@@ -479,7 +506,7 @@ i.light-mode,
     }
 
     to {
-        width: 70%;
+        width: 50%;
     }
 }
 
@@ -489,7 +516,17 @@ i.light-mode,
     }
 
     to {
-        width: 40%;
+        width: 20%;
+    }
+}
+
+@keyframes office {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 70%;
     }
 }
 

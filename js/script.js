@@ -3,26 +3,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   console.log("Portfolio site loaded");
 
   // Dark and Light Mode 
-  const lightBtn = document.getElementById("light-mode");
-  const darkBtn = document.getElementById("dark-mode");
+ let lightmode = localStorage.getItem('light-mode');
+ const themeSwitch = document.getElementById('theme-switch');
 
-  function setCookie(name, value, days) {
-    const expires = new Date(Date.now() + days * 864e5).toUTCString();
-    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
-  }
-
-  function getCookie(name) {
-    return document.cookie.split('; ').reduce((acc, cookie) => {
-      const [key, val] = cookie.split('=');
-      return key === name ? val : acc;
-    }, '');
-  }
-
-  function applyLightMode() {
-    lightBtn.classList.add("active2")
-    darkBtn.classList.remove("active2")
-
-    document.body.classList.add("light-mode");
+ const enableLightmode = () => {
+    document.body.classList.add('light-mode');
     document.querySelector("header").classList.add("light-mode");
     document.querySelectorAll("html").forEach(h => h.classList.add("light-mode"));
     document.querySelectorAll(".sidenav a").forEach(s => s.classList.add("light-mode"));
@@ -37,15 +22,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelectorAll(".language-level").forEach(level => level.classList.add("light-mode"));
     document.querySelectorAll("i").forEach(end => end.classList.add("light-mode"));
     document.querySelectorAll(".subtitle").forEach(subtitle => subtitle.classList.add("light-mode"));
-    document.querySelectorAll(".secondary").forEach(button => button.classList.add("light-mode"));
-  }
-  function applyDarkMode() {
-    darkBtn.classList.add("active2")
-    lightBtn.classList.remove("active2")
+    document.querySelectorAll("button").forEach(button => button.classList.add("light-mode"));
+    document.querySelectorAll("#title span").forEach(title => title.classList.add("light-mode"));
+    document.querySelectorAll("#description").forEach(d => d.classList.add("light-mode"));
+    localStorage.setItem('light-mode', 'active');
+ }
 
-    document.body.classList.remove("light-mode");
-    document.body.classList.remove("light-mode");
-    document.querySelector("header").classList.remove("light-mode");
+  const disableLightmode = () => {
+    document.body.classList.remove('light-mode');
+      document.querySelector("header").classList.remove("light-mode");
     document.querySelectorAll("html").forEach(h => h.classList.remove("light-mode"));
     document.querySelectorAll(".sidenav a").forEach(s => s.classList.remove("light-mode"));
     document.querySelectorAll(".nav2 a").forEach(n => n.classList.remove("light-mode"));
@@ -59,26 +44,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelectorAll(".language-level").forEach(level => level.classList.remove("light-mode"));
     document.querySelectorAll("i").forEach(end => end.classList.remove("light-mode"));
     document.querySelectorAll(".subtitle").forEach(subtitle => subtitle.classList.remove("light-mode"));
+    document.querySelectorAll("button").forEach(button => button.classList.remove("light-mode"));
+    document.querySelectorAll("#title span").forEach(title => title.classList.remove("light-mode"));
+    document.querySelectorAll("#description").forEach(d => d.classList.remove("light-mode"));
+    localStorage.setItem('light-mode', null);
   }
 
-  lightBtn.addEventListener('click', function () {
-    applyLightMode();
-    setCookie('theme', 'light', 30);
-  });
+  if(lightmode === 'active'){
+    enableLightmode();
+  }
 
-  darkBtn.addEventListener('click', function () {
-    applyDarkMode();
-    setCookie('theme', 'dark', 30);
-  });
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = getCookie('theme');
-    if (savedTheme === 'dark') {
-      applyDarkMode();
-    } else {
-      applyLightMode();
+ themeSwitch.addEventListener('click', () => {
+    lightmode = localStorage.getItem('light-mode');
+    if(lightmode !== 'active'){
+        enableLightmode()
     }
-  });
-
+    else{
+      disableLightmode()
+    }
+ })
 })
 // sidenav for small screens
 function openNav() {
@@ -146,7 +130,8 @@ function setup() {
 }
 
 function draw() {
-  background(7, 12, 17);
+  clear();
+
   for (let i = 0; i < quantity; i++) {
 
     let thickness = map(star[i][2], 1, 5, 0.5, 3.5);
