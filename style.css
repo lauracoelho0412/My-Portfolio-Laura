@@ -583,6 +583,9 @@ i.light-mode,
         width: 0%;
     }
 
+    #theme-switch {
+        position: absolute;
+    }
     .icon {
         visibility: visible;
     }
